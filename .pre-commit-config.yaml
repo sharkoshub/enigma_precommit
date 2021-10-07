@@ -18,3 +18,4 @@ repos:
     language: system
     stages: [post-commit]
     args: [post_commit_test.py]
+  
