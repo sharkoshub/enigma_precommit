@@ -18,4 +18,9 @@ repos:
     language: system
     stages: [post-commit]
     args: [post_commit_test.py]
-  
+  - id: Test pre push
+    name: Run Test pre push
+    entry: python
+    language: system
+    stages: [push]
+    args: [pre_push_test.py]
