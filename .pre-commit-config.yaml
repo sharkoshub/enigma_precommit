@@ -1,0 +1,8 @@
+repos:
+- repo: local
+  hooks:
+  - id: MyTests
+    name: Run my tests
+    entry: python
+    language: system
+    args: [pre_commit_test.py]
