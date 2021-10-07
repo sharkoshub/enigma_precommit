@@ -1,23 +1,20 @@
 repos:
 - repo: local
   hooks:
-  - id: Test pre-commit
-    name: Run Test pre-commit
+  - id: Test pre commit
+    name: Run Test pre commit
     entry: python
     language: system
     args: [pre_commit_test.py]
-  - id: Test commit-msg
-    name: Run Test commit-msg
+  - id: Test commit msg
+    name: Run Test commit msg
     entry: python
     language: system
+    stages: [commit-msg]
     args: [commit_msg_test.py]
-  - id: Test post-commit
-    name: Run Test post-commit
+  - id: Test post commit
+    name: Run Test post commit
     entry: python
     language: system
+    stages: [post-commit]
     args: [post_commit_test.py]
-  - id: Test pre-push
-    name: Run Test pre-push
-    entry: python
-    language: system
-    args: [pre_push_test.py]
